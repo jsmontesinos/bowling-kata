@@ -1,34 +1,37 @@
+
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.BeforeEach;
 
 public class BowlingGameTest {
 
-  @Test
-  public void should_return_empty_score() {
-    BowlingGame game = new BowlingGame();
+    BowlingGame game;
 
-    int score = game.score("--|--|--|--|--|--|--|--|--|---");
+    @BeforeEach
+    public void init() {
+        game = new BowlingGame();
+    }
 
-    assertEquals(0, score);
-  }
+    @Test
+    public void should_return_empty_score() {
+        int score = game.score("--|--|--|--|--|--|--|--|--|---");
 
-  @Test
-  public void should_score_1() {
-    BowlingGame game = new BowlingGame();
+        assertEquals(0, score);
+    }
 
-    int score = game.score("1-|--|--|--|--|--|--|--|--|---");
+    @Test
+    public void should_score_1() {
+        int score = game.score("1-|--|--|--|--|--|--|--|--|---");
 
-    assertEquals(1, score);
-  }
+        assertEquals(1, score);
+    }
 
-  @Test
-  public void should_score_1_on_second_roll() {
-    BowlingGame game = new BowlingGame();
+    @Test
+    public void should_score_1_on_second_roll() {
+        int score = game.score("-1|--|--|--|--|--|--|--|--|---");
 
-    int score = game.score("-1|--|--|--|--|--|--|--|--|---");
-
-    assertEquals(1, score);
-  }
+        assertEquals(1, score);
+    }
 
 }
