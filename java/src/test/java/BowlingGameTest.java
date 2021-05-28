@@ -2,11 +2,12 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class FizzBuzzTest {
+public class BowlingGameTest {
 
 	@Test
 	public void renameMe() {
-		assertTrue(true);
+		BowlingGame game = new BowlingGame();
+		
 	}
 
 }
