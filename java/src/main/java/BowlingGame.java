@@ -9,7 +9,7 @@ class BowlingGame {
         } catch (NumberFormatException e) {
             try {
                 number = Integer.parseInt(frames.substring(1, 2));
-            } catch (NumberFormatException e2) {}
+            } catch (NumberFormatException ignored) {}
         }
 
         return number;

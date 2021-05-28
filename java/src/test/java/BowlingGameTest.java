@@ -34,4 +34,11 @@ public class BowlingGameTest {
         assertEquals(1, score);
     }
 
+    @Test
+    public void should_score_simple_full_frame() {
+        int score = game.score("12|--|--|--|--|--|--|--|--|---");
+
+        assertEquals(3, score);
+    }
+
 }
