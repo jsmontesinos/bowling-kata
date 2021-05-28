@@ -13,4 +13,13 @@ public class BowlingGameTest {
 		assertEquals(0, score);
 	}
 
+	@Test
+	public void should_score_1() {
+		BowlingGame game = new BowlingGame();
+
+		int score = game.score("1-|--|--|--|--|--|--|--|--|---");
+
+		assertEquals(1, score);
+	}
+
 }
