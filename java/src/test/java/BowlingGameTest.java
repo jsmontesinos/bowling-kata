@@ -22,4 +22,13 @@ public class BowlingGameTest {
     assertEquals(1, score);
   }
 
+  @Test
+  public void should_score_1_on_second_roll() {
+    BowlingGame game = new BowlingGame();
+
+    int score = game.score("-1|--|--|--|--|--|--|--|--|---");
+
+    assertEquals(1, score);
+  }
+
 }
