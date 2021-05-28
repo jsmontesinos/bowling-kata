@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class BowlingGameTest {
 
 	@Test
-	public void renameMe() {
+	public void should_return_empty_score() {
 		BowlingGame game = new BowlingGame();
 
 		int score = game.score("--|--|--|--|--|--|--|--|--|---");
